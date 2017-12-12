@@ -82,10 +82,7 @@ footer a {color: #AF501D;}
         border-bottom: none;
     }
     .article-container article {flex: auto;}
-    .article-container aside {
-        width: 240px;
-        flex: 0 0 240px;
-    }
+    .article-container aside {flex: 0 0 240px;}
 }
 
 @media screen and (min-width: 480px) and (max-width: 800px) {
