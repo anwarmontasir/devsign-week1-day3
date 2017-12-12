@@ -50,7 +50,11 @@ figcaption {
     margin: 1rem 0 2rem;
 }
 
-footer {background: #eee;}
+footer {
+    background: #eee;
+    line-height: 1.2;
+    text-align: center;
+}
 footer a {color: #AF501D;}
 
 .read-more {
