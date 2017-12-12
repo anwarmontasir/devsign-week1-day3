@@ -22,18 +22,19 @@ a {
     text-decoration: none;
 }
 
-h1, h2, p {margin: 1rem 0 2rem;}
+h1, h2, h3, p {margin: 1rem 0 2rem;}
 
-h1, h2 {
+h1, h2, h3 {
     font-weight: bold;
     line-height: 1.2;
 }
 h1 {font-size: 1.8rem;}
 h2 {font-size: 1.4rem;}
+h3 {font-size: 1.3rem;}
 p {font-size: 1.2rem;}
 figcaption, small {font-size: 1rem;}
 
-header, article, footer {padding: 1rem;}
+header, article, aside, footer {padding: 1rem;}
 
 header { background: #555;}
 header img {
@@ -69,15 +70,28 @@ footer a {color: #AF501D;}
     content:  " \00bb";
 }
 
-@media screen and (min-width: 600px) {
-    .home-container {
+@media screen and (min-width: 800px) {
+    .home-container, .article-container {
         display: flex;
-        flex-wrap: wrap;
         max-width: 1024px;
         margin: 0 auto;
     }
+    .home-container {flex-wrap: wrap;}
     .home-container article {
         width: calc(50% - 2rem);
         border-bottom: none;
+    }
+    .article-container article {flex: auto;}
+    .article-container aside {
+        width: 240px;
+        flex: 0 0 240px;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 800px) {
+    aside figure {
+        width: 240px;
+        float: left;
+        margin: 0 1rem .5rem 0;
     }
 }
